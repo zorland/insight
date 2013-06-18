@@ -1,0 +1,168 @@
+
+{% extends "template.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="/static/deck/core/deck.core.css">
+<link rel="stylesheet" href="/static/deck/css/home.css">
+<link rel="stylesheet" href="/static/deck/themes/style/swiss.css">
+<link rel="stylesheet" href="/static/deck/themes/transition/fade.css">
+
+<script src="/static/deck/modernizr.custom.js"></script>
+
+{% endblock %}
+
+
+{% block main %}
+
+<!-- Slide 1 -->
+<section class="slide" id="intro" >
+  <div class="row-fluid page container-narrow" >
+    <div class="span12 row-fluid">
+      <h1>Dineamic Foods</h1>
+<hr>
+      <h3>Smart Decisions Based on Dynamic Data</h3>
+      <img src="/static/images/foodBkg.jpg" style="height: 300px; margin-top: 20px;" >
+    </div>
+  </div>
+</section>
+
+<!-- Slide 2 -->
+<section class="slide page" id="problem">
+  <div class="row-fluid page container-narrow" >
+    <h2>Yelp Contains Lots of Information</h2>
+    <div class="sample-content">
+
+      <div class="span12 row-fluid">
+	<p>But it's <b>hard</b> to make efficient use of it</p>
+	<img src="/static/images/talk2-1.png" style="height: 400px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 2 -->
+<section class="slide page" id="problem">
+  <div class="row-fluid page container-narrow" >
+    <h2>...and so does Google.</h2>
+    <div class="sample-content">
+
+      <div class="span12 row-fluid">
+	<p>Hundreds of results</p>
+	<img src="/static/images/talk2-2.png" style="height: 400px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Slide 2 -->
+<section class="slide page" id="problem">
+  <div class="row-fluid page container-narrow" >
+    <h2>Dynamic Conditions are Important too</h2>
+    <div class="sample-content">
+
+      <div class="span12 row-fluid">
+	<p>Sunny days are not the same as thunderstorms.</p>
+	<img src="/static/images/weather5.png" style="height: 400px;">
+	<p>But who has time to wade through this information!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 3 -->
+<section class="slide page" id="solution">
+  <div class="row-fluid page container-narrow" >
+    <h2>The Solution</h2>
+    <div class="sample-content">
+      <p>Dineamic Foods helps you make the smart choice.</p>
+      <div class="span12 row-fluid">
+	<img src="/static/images/BarkovChain.png" style="height: 350px; border: 3px solid black;" >
+      </div>
+    </div>
+    <div style="text-align: center">
+      <h2>Demo</h2>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 4 -->
+<section class="slide page" id="Algorithm">
+  <div class="row-fluid page container-narrow" >
+    <h2>The Algorithm</h2>
+    <div class="sample-content">
+      <img src="/static/images/weight_algorithm.png" style="height: 500px;">
+    </div>
+  </div>
+</section>
+
+<!-- Slide 4 -->
+<section class="slide page" id="Algorithm">
+  <div class="row-fluid page container-narrow" >
+    <h2>Online Learning</h2>
+    <div class="sample-content">
+      <img src="/static/images/OnlineLearning.png" style="height: 500px;">
+    </div>
+  </div>
+</section>
+
+<!-- Slide 5 -->
+<section class="slide page" id="Stack">
+  <div class="row-fluid page container-narrow" >
+    <h2>The Stack</h2>
+    <div class="sample-content" >
+      <img src="/static/images/Stack.jpeg" style="height: 500px;">
+    </div>
+  </div>
+</section>
+
+
+<!-- Slide 6 -->
+<section class="slide page" id="AboutMe">
+  <div class="row-fluid page container-narrow" >
+    <h2>whoami</h2>
+    <div class="sample-content">
+      <ul>
+	<li>George Lewis</li>
+	<li>PhD in high energy experimental particle physics</li> 
+	<li>New York University</li>
+	<li>Worked on the Large Hadron Collider (LHC)</li>
+	<li>Member of the ATLAS experiment</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="/static/images/lhc.jpg" style="width: 400px; display: inline;"/>
+      <br>
+      <img src="/static/images/atlas.gif" style="margin-right: 10px; width: 100px; display: inline;"/>
+      <img src="/static/images/nyu_logo.jpeg" style="margin-left: 10px; width: 100px; display: inline;"/>
+    </div>
+  </div>
+
+  <a href="https://github.com/ghl3/BarkovChain" style="margin-top: 30px;">
+    <img style="position: absolute; top: 30px; left: 0; border: 0;" 
+	 src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" 
+	 alt="Fork me on GitHub">
+  </a>
+
+</section>
+
+
+<!-- Deck Core and extensions -->
+<script src="/static/deck/core/deck.core.js"></script>
+<script src="/static/deck/extensions/hash/deck.hash.js"></script>
+<script src="/static/deck/extensions/menu/deck.menu.js"></script>
+<script src="/static/deck/extensions/goto/deck.goto.js"></script>
+<script src="/static/deck/extensions/status/deck.status.js"></script>
+<script src="/static/deck/extensions/navigation/deck.navigation.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+  $(function() {
+  $.deck('.slide');
+  });
+</script>
+
+{% endblock %}
+

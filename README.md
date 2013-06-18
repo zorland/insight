@@ -1,4 +1,2 @@
-insight
-=======
-
-data projects
+BarkovChain
+===========

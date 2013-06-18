@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<dwml version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://graphical.weather.gov/xml/DWMLgen/schema/DWML.xsd">
+  <head>
+    <product srsName="WGS 1984" concise-name="time-series" operational-mode="official">
+      <title>NOAA's National Weather Service Forecast Data</title>
+      <field>meteorological</field>
+      <category>forecast</category>
+      <creation-date refresh-frequency="PT1H">2013-06-18T19:56:48Z</creation-date>
+    </product>
+    <source>
+      <more-information>http://graphical.weather.gov/xml/</more-information>
+      <production-center>Meteorological Development Laboratory<sub-center>Product Generation Branch</sub-center></production-center>
+      <disclaimer>http://www.nws.noaa.gov/disclaimer.html</disclaimer>
+      <credit>http://www.weather.gov/</credit>
+      <credit-logo>http://www.weather.gov/images/xml_logo.gif</credit-logo>
+      <feedback>http://www.weather.gov/feedback.php</feedback>
+    </source>
+  </head>
+  <data>
+    <location>
+      <location-key>point1</location-key>
+      <point latitude="42.04" longitude="-87.69"/>
+    </location>
+    <moreWeatherInformation applicable-location="point1">http://forecast.weather.gov/MapClick.php?textField1=42.04&amp;textField2=-87.69</moreWeatherInformation>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p24h-n7-1</layout-key>
+      <start-valid-time>2013-06-18T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-18T20:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-19T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-19T20:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-20T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-20T20:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-21T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-21T20:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-22T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-22T20:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-23T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-23T20:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-24T08:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-24T20:00:00-05:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p12h-n13-2</layout-key>
+      <start-valid-time>2013-06-18T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-18T19:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-18T19:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-19T07:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-19T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-19T19:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-19T19:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-20T07:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-20T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-20T19:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-20T19:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-21T07:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-21T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-21T19:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-21T19:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-22T07:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-22T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-22T19:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-22T19:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-23T07:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-23T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-23T19:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-23T19:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-24T07:00:00-05:00</end-valid-time>
+      <start-valid-time>2013-06-24T07:00:00-05:00</start-valid-time>
+      <end-valid-time>2013-06-24T19:00:00-05:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p3h-n34-3</layout-key>
+      <start-valid-time>2013-06-18T16:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-18T19:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-18T22:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T01:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T04:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T07:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T10:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T13:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T16:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T19:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-19T22:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T01:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T04:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T07:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T10:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T13:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T16:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-20T19:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-21T01:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-21T07:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-21T13:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-21T19:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-22T01:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-22T07:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-22T13:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-22T19:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-23T01:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-23T07:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-23T13:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-23T19:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-24T01:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-24T07:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-24T13:00:00-05:00</start-valid-time>
+      <start-valid-time>2013-06-24T19:00:00-05:00</start-valid-time>
+    </time-layout>
+    <parameters applicable-location="point1">
+      <temperature type="maximum" units="Fahrenheit" time-layout="k-p24h-n7-1">
+        <name>Daily Maximum Temperature</name>
+        <value>64</value>
+        <value>64</value>
+        <value>73</value>
+        <value>81</value>
+        <value>88</value>
+        <value>87</value>
+        <value>87</value>
+      </temperature>
+      <cloud-amount type="total" units="percent" time-layout="k-p3h-n34-3">
+        <name>Cloud Cover Amount</name>
+        <value>50</value>
+        <value>33</value>
+        <value>14</value>
+        <value>3</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>7</value>
+        <value>5</value>
+        <value>6</value>
+        <value>6</value>
+        <value>18</value>
+        <value>10</value>
+        <value>14</value>
+        <value>43</value>
+        <value>51</value>
+        <value>41</value>
+        <value>46</value>
+        <value>49</value>
+        <value>35</value>
+        <value>40</value>
+        <value>49</value>
+        <value>52</value>
+        <value>53</value>
+        <value>63</value>
+        <value>43</value>
+        <value>49</value>
+        <value>53</value>
+        <value>56</value>
+        <value>54</value>
+        <value>39</value>
+        <value>48</value>
+        <value>62</value>
+        <value>58</value>
+      </cloud-amount>
+      <probability-of-precipitation type="12 hour" units="percent" time-layout="k-p12h-n13-2">
+        <name>12 Hourly Probability of Precipitation</name>
+        <value>10</value>
+        <value>1</value>
+        <value>0</value>
+        <value>4</value>
+        <value>10</value>
+        <value>11</value>
+        <value>11</value>
+        <value>26</value>
+        <value>29</value>
+        <value>23</value>
+        <value>31</value>
+        <value>35</value>
+        <value>25</value>
+      </probability-of-precipitation>
+      <conditions-icon type="forecast-NWS" time-layout="k-p3h-n34-3">
+        <name>Conditions Icons</name>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nfew.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nskc.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nskc.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/skc.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/skc.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/few.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/skc.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/few.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nfew.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nfew.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nfew.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/few.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/bkn.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nsct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/scttsra10.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/ntsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/scttsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nscttsra20.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra20.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nscttsra40.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/scttsra40.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra30.jpg</icon-link>
+      </conditions-icon>
+    </parameters>
+  </data>
+</dwml>
