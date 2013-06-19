@@ -50,12 +50,12 @@
 -->
 <div id="middle_container" class="row-fluid page" style="margin-top: 125px; height: 380px;">
 
-  <div class="btn-group">
+<!--  <div class="btn-group">
     <button class="btn">Today</button>
     <button class="btn">Tomorrow</button>
   </div>
-  
-  <div class="span3 offset4 text-center">
+ --> 
+  <div class="span3 offset3 text-center">
     <form method="post" action="{{ url_for('query') }}">
       <fieldset>
         <label>Where do you want to eat </label>
@@ -67,7 +67,14 @@
       </fieldset>
     </form>
   </div>
-  </div>
+
+
+    <div class ="span2 offset 10">
+      <img src="/static/images/chef.png">
+    </div>
+  </div>        
+
+
 
 </div>
 

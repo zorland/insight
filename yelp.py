@@ -12,16 +12,20 @@ import re
 from googDat import *
 import pandas as pd 
 
-def yelp_request(latlng=[44,-90], outdoor = False, hot = False, cold = False, regular = False ):
-
-
+def yelp_request(latlng=[44,-90], weatherInfo ={}):
+#  cold = True
+  print weatherInfo
   url_params ={}
   url_params['ll'] = str(latlng[0])+"," + str(latlng[1])
   #setting up location
   url_params['category'] = "food"
-  url_params['limit'] = 16
+  url_params['limit'] = 20
   #duh
-  if(outdoor):
+  if("hot" in weatherInfo):
+      url_params['term'] = "ice"
+  elif("cold" in weatherInfo):
+      url_params['term'] = "restaurant+thai+mexican"
+  elif("sun" in weatherInfo):
       url_params['term'] = "restaurant+outdoor"
   else:    
     url_params['term'] = "restaurant"
@@ -69,8 +73,8 @@ def yelp_request(latlng=[44,-90], outdoor = False, hot = False, cold = False, re
   return response
 
 
-def yelp_findRest(latlng =[44,-90], filename = "yelpOut.txt"):
-  response = yelp_request(latlng)
+def yelp_findRest(latlng =[44,-90], weatherInfo = {},filename = "yelpOut.txt"):
+  response = yelp_request(latlng, weatherInfo)
   rawData = open(filename,"w")
   rawData.write(json.dumps(response, sort_keys=True, indent=2))
 #  rawData.write(json.dumps(response), sort_keys=True)

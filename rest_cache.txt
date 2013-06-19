@@ -1,13 +1,11 @@
-1735 Benson Ave,1216,The Stained Glass,4.0,139,http://m.yelp.com/biz/the-stained-glass-evanston,the-stained-glass-evanston,3.8,American (New),2
-1625 Hinman Ave,1289,Quince,4.0,94,http://m.yelp.com/biz/quince-evanston-2,quince-evanston-2,4.3,American (New),3
-1016 Church St,987,Thai Sookdee Restaurant,3.5,166,http://m.yelp.com/biz/thai-sookdee-restaurant-evanston,thai-sookdee-restaurant-evanston,3.6,Thai,2
-630 Church St,1198,Mt. Everest Restaurant,4.0,191,http://m.yelp.com/biz/mt-everest-restaurant-evanston,mt-everest-restaurant-evanston,3.8,Indian,2
-618 Church St,1208,Bistro Bordeaux,3.5,136,http://m.yelp.com/biz/bistro-bordeaux-evanston,bistro-bordeaux-evanston,4.3,French,2
-525 Dempster St,827,Blind Faith Caf,3.5,336,http://m.yelp.com/biz/blind-faith-caf%C3%A9-evanston-2,blind-faith-caf\u00e9-evanston-2,3.7,Vegetarian,2
-815 Chicago Ave,1235,Campagnola,4.5,89,http://m.yelp.com/biz/campagnola-evanston,campagnola-evanston,4.2,Italian,2
-505 Main St,1181,Oceanique,3.5,142,http://m.yelp.com/biz/oceanique-evanston,oceanique-evanston,4.2,French,3
-1566 Oak Ave,731,Pensiero Ristorante,3.5,67,http://m.yelp.com/biz/pensiero-ristorante-evanston-2,pensiero-ristorante-evanston-2,4.5,Italian,3
-1512 Sherman Ave,874,Creperie Saint Germain,3.5,56,http://m.yelp.com/biz/creperie-saint-germain-evanston,creperie-saint-germain-evanston,10,Creperies,1
-1018 Davis St,839,Cozy Noodles & Rice,3.5,202,http://m.yelp.com/biz/cozy-noodles-and-rice-evanston,cozy-noodles-and-rice-evanston,4.0,Thai,2
-1631 Chicago Ave,1216,Found Kitchen & Social House,4.0,101,http://m.yelp.com/biz/found-kitchen-and-social-house-evanston,found-kitchen-and-social-house-evanston,4.0,American (New),2
-915 Davis St,955,Chef's Station,4.0,40,http://m.yelp.com/biz/chefs-station-evanston,chefs-station-evanston,4.2,American (New),2
+4273 W Thunderbird Rd,2879,Desert Swirl Frozen Yogurt,4.0,19,http://m.yelp.com/biz/desert-swirl-frozen-yogurt-phoenix,desert-swirl-frozen-yogurt-phoenix,10,Ice Cream & Frozen Yogurt,10
+4326 W Bell Rd,2437,Baskin-,3.5,6,http://m.yelp.com/biz/baskin-robbins-glendale-4,baskin-robbins-glendale-4,10,Ice Cream & Frozen Yogurt,10
+4123 W Thunderbird Rd,329,Starbucks Coffee,3.0,21,http://m.yelp.com/biz/starbucks-coffee-phoenix-22,starbucks-coffee-phoenix-22,10,Coffee & Tea,10
+12456 N 28th Dr,3600,Dairy Queen,4.0,3,http://m.yelp.com/biz/dairy-queen-phoenix-15,dairy-queen-phoenix-15,10,Ice Cream & Frozen Yogurt,10
+4410 W Union Hills Dr,3571,Vern's Water Well,4.0,2,http://m.yelp.com/biz/verns-water-well-glendale-2,2fD0BBE5h383zd_IqBBDTQ,10,Ice Cream & Frozen Yogurt,10
+3515-A W Union Hills Dr,2684,Loving Hut,4.0,95,http://m.yelp.com/biz/loving-hut-glendale,verns-water-well-glendale-2,10,Vegan,10
+2425 W Utopia Rd,3960,Berto's Gelato & Sorbet,5.0,2,http://m.yelp.com/biz/bertos-gelato-and-sorbet-phoenix,loving-hut-glendale,10,Ice Cream & Frozen Yogurt,10
+Phoenix AZ 85053,663,Mamma Toledo's,4.5,13,http://m.yelp.com/biz/mamma-toledos-phoenix-2,bertos-gelato-and-sorbet-phoenix,10,Street Vendors,10
+2340 W Bell Rd,2055,Caramba Fresh Mexican Food,4.0,40,http://m.yelp.com/biz/caramba-fresh-mexican-food-phoenix,mamma-toledos-phoenix-2,10,Mexican,10
+3602 W Bell Rd,1269,European Bakery and Cafe,4.5,18,http://m.yelp.com/biz/european-bakery-and-cafe-glendale,caramba-fresh-mexican-food-phoenix,10,Desserts,10
+4263 W Thunderbird Rd,2942,Baker Wee,4.0,50,http://m.yelp.com/biz/baker-wee-phoenix,european-bakery-and-cafe-glendale,10,Desserts,10

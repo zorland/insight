@@ -30,6 +30,21 @@ def nws_gatherInfo(apiCall, filename = "default_nws.txt"):
 
 
 
+def nws_getImage(weatherInfo = {}):
+	url = "/static/images/newsun.png"
+	if("rain" in weatherInfo):
+		url = "/static/images/rain.png"
+	elif("hot" in weatherInfo):
+		url = "/static/images/hot.png"
+	elif("cold" in weatherInfo):
+		url = "/static/images/cold.png"
+	elif("cloud" in weatherInfo):
+		url = "/static/images/cloud.png"
+
+	return url
+
+
+
 def nws_setWeather(forecast = [70,10,0]):
 
 	high = forecast[0]
@@ -81,6 +96,9 @@ def nws_getLocal(fullData, offset =0):
 	high =float(fullData[offset])
 	cloudy = (float(fullData[cloudyStart]) + float(fullData[cloudyStart+1]) + float(fullData[cloudyStart+2]))/3
 	rainy = (float(fullData[rainyStart]) + float(fullData[rainyStart+1]))/2
+
+	cloudy = int(cloudy*100)/100.  #truncate the floats
+	rainy = int(cloudy*100)/100.
 	info = [high, cloudy,rainy]
 	return info
 

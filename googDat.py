@@ -14,10 +14,10 @@ def goog_APICall(restName ="blue&fish", latlng="-33.867,151.2"):
 #	callName = restName.replace(' ', '&')
 	print callName
 	baseStr = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
-	middleStr = '&radius=1000&types=food&name='
+	middleStr = '&radius=3000&types=food&name='
 	suffix = '&sensor=false&key=AIzaSyBRAegE--xWfdAJQCkehT6j1y0Ic_KOBik'
 #	print "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&types=food&name=fish&sensor=false&key=AIzaSyBRAegE--xWfdAJQCkehT6j1y0Ic_KOBik"	
-#	print baseStr + locString+ middleStr+  callName +suffix
+	print baseStr + locString+ middleStr+  callName +suffix
 	apiCall = baseStr + locString+ middleStr+  callName +suffix
 
 #	filename = "default_goog.txt"
@@ -29,8 +29,9 @@ def goog_APICall(restName ="blue&fish", latlng="-33.867,151.2"):
 	googleResponse = urllib.urlopen(apiCall);
 	jsonResponse = json.loads(googleResponse.read())
 	s= jsonResponse['results']
-	priceLev = 10
+	priceLev = 2 # this is a sad default but cant do better
 	stars = 10
+	print "LENGTH =" + str(len(s))
 	if (len(s) > 0):
 		if('price_level' in s[0]):
 			priceLev = s[0]['price_level']

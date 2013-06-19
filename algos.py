@@ -13,49 +13,62 @@ def algo_MakePd(weatherInfo = {}, filename = "rest_cache.txt"):
   rests = pd.read_csv(filename, names=['address', 'distance', 'name', 'rating', 'count', 'url', 'id', 'googRate', 'cat', 'priceLevel'])
   print rests.ix[0]
   rests['jacq']=1
-#  print rests.ix[0]
 
+
+  # clean values
   rests['distance'] *= 0.000622
-  #convert meters to miles
 
-  sortedRest = algo_CalcJ(rests, weatherInfo)
+  for i in range (0,len(rests['jacq'])):
+    if(rests['googRate'][i] == 10):
+      rests['googRate'][i] = rests['rating'][i]
+      
 
-  #pg 128
+
+  jacqRest = algo_CalcJ(rests, weatherInfo)
+
+
   print "algo success! 2"
   #rests.sort("rating", ascending= False).values[2]
-  return sortedRest
+  return jacqRest
                       
 
 
 def algo_CalcJ(inPd, weatherInfo={}):
   
   restInfo = inPd
-  if('rain' in weatherInfo):
-    print "rain"
-  if('cloud' in weatherInfo):
-    print "cloud"
-  if('sun' in weatherInfo):
-    print "sun"
+  
 
+  if('rain' in weatherInfo):
+     for i in range (0,len(restInfo['jacq'])):
+       restInfo['jacq'][i] = 100. - restInfo['distance'][i]*13.
+       restInfo['distance'][i] = int(restInfo['distance'][i]*10)/10.0
+     return restInfo
+  
 
   for i in range (0,len(restInfo['jacq'])):
-      restInfo['jacq'][i] *= (restInfo['rating'][i]  * restInfo['count'][i] +restInfo['googRate'][i] )
-      restInfo['jacq'][i] /= (restInfo['priceLevel'][i])
-      restInfo['jacq'][i] -= restInfo['distance'][i]*25
-      #need to be clever about ratings and counts.                                                                                                                               
-      #I suggest mc study or just throw a mc cone?                                                                                                                               
-#      print restInfo['jacq'][i]
-
-  if('hot' in weatherInfo):
-    print "hot"
-  if('cold' in weatherInfo):
-    print "cold"
-
-
+      scaledRating = algo_scale(restInfo['rating'][i], restInfo['count'][i])
+      restInfo['jacq'][i] *= 50*(scaledRating*2 + restInfo['count'][i]/100. +restInfo['googRate'][i] )
+      if(restInfo['priceLevel'][i] > 3):
+        restInfo['jacq'][i] *= (3/4.)
+      restInfo['distance'][i] = int(restInfo['distance'][i]*10)/10.0
+      restInfo['jacq'][i] -= restInfo['distance'][i]*restInfo['distance'][i]/10
+      if(restInfo['cat'][i]=="Thai" or restInfo['cat'][i]=="Mexican" or restInfo['cat'][i]=="Indian"):
+        restInfo['jacq'][i] *= 2.
+        
+      if(restInfo['cat'][i]=="Ethnic Food"):
+        restInfo['jacq'][i] *= 0.
+      #stupid hack =(  
 
   return restInfo
                       
 
 
-
-
+def algo_scale(rating =3, count = 10):
+  p = rating
+  n = count
+  z = 3.8
+  # square of test statistic for 95 confidence
+  if(rating < 2.5):
+    return p + (z**2)/(2*n) + (z *((p*(5-p) + z**2/(4*n))/n)**0.5)/(1+z**2/n)
+  else:
+    return p + (z**2)/(2*n) - (z *((p*(5-p) + z**2/(4*n))/n)**0.5)/(1+z**2/n)

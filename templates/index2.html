@@ -36,11 +36,9 @@
 	<div class="links_main links_deep">
 	  <h3><a class="large" href={{restUrl}}>  {{restName}} </a></h3>
 	  <div class="snippet">
-	   {{restCat}}.  Rating of {{restRating}}.   Dine-amic score of {{restJacq}}. 
+	   {{restCat}}.  Yelp rating: {{restRating}}.   Dine-amic score: {{restJacq}}. 
 	  </div`>
-	    <div><a class="url" href="http://www.maps.google.com/maps?q={{restName}} near {{place}}">  {{restDist}} away -  gmaps.
-	      </a><a class="links_menu" href="/?q=324453+site:www.vrbo.com" title="Search domain www.vrbo.com">
-		Something else/?
+	    <div><a class="url" href="http://www.maps.google.com/maps?q={{restName}} near {{place}}">  {{restDist}} miles away -  gmaps.
 	      </a>
 	    </div>
 	</div>
@@ -53,11 +51,9 @@
 	<div class="links_main links_deep">
 	  <h3><a class="large" href={{rest1Url}}>  {{rest1Name}} </a></h3>
 	  <div class="snippet">
-	   {{rest1Cat}}.  Rating of {{rest1Rating}}.   Dine-amic score of {{rest1Jacq}}. 
+	   {{rest1Cat}}.  Yelp rating: {{rest1Rating}}.   Dine-amic score: {{rest1Jacq}}. 
 	  </div`>
-	    <div><a class="url" href="http://www.maps.google.com/maps?q={{restName1}} near {{place}}">  {{rest1Dist}} away -  gmaps.
-	      </a><a class="links_menu" href="/?q=324453+site:www.vrbo.com" title="Search domain www.vrbo.com">
-		something else?
+	    <div><a class="url" href="http://www.maps.google.com/maps?q={{rest1Name}} near {{place}}">  {{rest1Dist}} miles away -  gmaps.
 	      </a>
 	    </div>
 	</div>
@@ -72,13 +68,11 @@
     <div class="row-fluid">
 	<div class="span6 offset 2" >
 	<div class="links_main links_deep">
-	  <h3><a class="large" href={{restUrl}}>  {{restName}} </a></h3>
+	  <h3><a class="large" href={{rest2Url}}>  {{rest2Name}} </a></h3>
 	  <div class="snippet">
-	   {{restCat}}.  Rating of {{restRating}}.   Dine-amic score of {{restJacq}}. 
+	   {{rest2Cat}}.  Yelp rating: {{rest2Rating}}.   Dine-amic score: {{rest2Jacq}}. 
 	  </div`>
-	    <div><a class="url" href="http://www.maps.google.com/maps?q={{restName}} near {{place}}">  {{restDist}} away -  gmaps.
-	      </a><a class="links_menu" href="/?q=324453+site:www.vrbo.com" title="Search domain www.vrbo.com">
-		Something else/?
+	    <div><a class="url" href="http://www.maps.google.com/maps?q={{rest2Name}} near {{place}}">  {{rest2Dist}} miles away -  gmaps.
 	      </a>
 	    </div>
 	</div>
@@ -89,13 +83,11 @@
     <div class="row-fluid">
 	<div class="span6 offset 2" >
 	<div class="links_main links_deep">
-	  <h3><a class="large" href={{rest1Url}}>  {{rest1Name}} </a></h3>
+	  <h3><a class="large" href={{rest3Url}}>  {{rest3Name}} </a></h3>
 	  <div class="snippet">
-	   {{rest1Cat}}.  Rating of {{rest1Rating}}.   Dine-amic score of {{rest1Jacq}}. 
+	   {{rest3Cat}}.  Yelp rating: {{rest3Rating}}.   Dine-amic score: {{rest3Jacq}}. 
 	  </div`>
-	    <div><a class="url" href="http://www.maps.google.com/maps?q={{restName1}} near {{place}}">  {{rest1Dist}} away -  gmaps.
-	      </a><a class="links_menu" href="/?q=324453+site:www.vrbo.com" title="Search domain www.vrbo.com">
-		something else?
+	    <div><a class="url" href="http://www.maps.google.com/maps?q={{rest3Name}} near {{place}}">  {{rest3Dist}} miles away -  gmaps.
 	      </a>
 	    </div>
 	</div>
@@ -116,11 +108,11 @@
     <div class="span8 offset 1 ">
       
       <h3>Weather</h3>
-      <span class="lead"> <small>Day high of {{dayHigh}}  and cloud cover of {{dayCloudy}}.</small></span> 
+      <span class="lead"> <small>Day high of {{dayHigh}}  and cloud cover of {{dayCloudy}}%.</small></span> 
     </div>
     
     <div class ="span2 offset 3">
-      <img src="static/images/weather1.png">
+      <img src="{{weatherImage}}">
     </div>
 	
   </div>
