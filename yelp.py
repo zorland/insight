@@ -91,7 +91,7 @@ def yelp_getRest(latlng =[44,-90],filename = "yelpOut.txt", cacheName = "rest_ca
   fullText = data.read()
   address = re.findall('display\waddress":\s\[\s*"(.*)"',fullText)
   distance = re.findall('distance":\s(\w*[^.])',fullText)
-  name = re.findall('name":\s"([\w\s&\'.]*[^"])',fullText)
+  name = re.findall('name":\s"([\w\s&\'.-]*[^"])',fullText)
   rating = re.findall('rating":\s(\d.\d)',fullText)
   numRates = re.findall('review_count":\s(\d*)',fullText)
   url = re.findall('mobile_url":\s"(.*[^"])"',fullText)
