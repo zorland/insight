@@ -1,11 +1,17 @@
-4273 W Thunderbird Rd,2879,Desert Swirl Frozen Yogurt,4.0,19,http://m.yelp.com/biz/desert-swirl-frozen-yogurt-phoenix,desert-swirl-frozen-yogurt-phoenix,10,Ice Cream & Frozen Yogurt,10
-4326 W Bell Rd,2437,Baskin-,3.5,6,http://m.yelp.com/biz/baskin-robbins-glendale-4,baskin-robbins-glendale-4,10,Ice Cream & Frozen Yogurt,10
-4123 W Thunderbird Rd,329,Starbucks Coffee,3.0,21,http://m.yelp.com/biz/starbucks-coffee-phoenix-22,starbucks-coffee-phoenix-22,10,Coffee & Tea,10
-12456 N 28th Dr,3600,Dairy Queen,4.0,3,http://m.yelp.com/biz/dairy-queen-phoenix-15,dairy-queen-phoenix-15,10,Ice Cream & Frozen Yogurt,10
-4410 W Union Hills Dr,3571,Vern's Water Well,4.0,2,http://m.yelp.com/biz/verns-water-well-glendale-2,2fD0BBE5h383zd_IqBBDTQ,10,Ice Cream & Frozen Yogurt,10
-3515-A W Union Hills Dr,2684,Loving Hut,4.0,95,http://m.yelp.com/biz/loving-hut-glendale,verns-water-well-glendale-2,10,Vegan,10
-2425 W Utopia Rd,3960,Berto's Gelato & Sorbet,5.0,2,http://m.yelp.com/biz/bertos-gelato-and-sorbet-phoenix,loving-hut-glendale,10,Ice Cream & Frozen Yogurt,10
-Phoenix AZ 85053,663,Mamma Toledo's,4.5,13,http://m.yelp.com/biz/mamma-toledos-phoenix-2,bertos-gelato-and-sorbet-phoenix,10,Street Vendors,10
-2340 W Bell Rd,2055,Caramba Fresh Mexican Food,4.0,40,http://m.yelp.com/biz/caramba-fresh-mexican-food-phoenix,mamma-toledos-phoenix-2,10,Mexican,10
-3602 W Bell Rd,1269,European Bakery and Cafe,4.5,18,http://m.yelp.com/biz/european-bakery-and-cafe-glendale,caramba-fresh-mexican-food-phoenix,10,Desserts,10
-4263 W Thunderbird Rd,2942,Baker Wee,4.0,50,http://m.yelp.com/biz/baker-wee-phoenix,european-bakery-and-cafe-glendale,10,Desserts,10
+Palo Alto CA 94309,0,Moroccan Feast,5.0,5,http://m.yelp.com/biz/moroccan-feast-palo-alto,moroccan-feast-palo-alto,10,Moroccan,10
+420 Emerson St,2861,Evvia Estiatorio,4.5,1169,http://m.yelp.com/biz/evvia-estiatorio-palo-alto,evvia-estiatorio-palo-alto,10,Greek,10
+460 Ramona St,2912,Garden Fresh,4.0,315,http://m.yelp.com/biz/garden-fresh-palo-alto,garden-fresh-palo-alto,10,Vegetarian,10
+546 University Ave,3368,Tamarine,4.0,986,http://m.yelp.com/biz/tamarine-palo-alto,tamarine-palo-alto,10,Vietnamese,10
+201 S California Ave,2537,Baum,4.0,222,http://m.yelp.com/biz/baum%C3%A9-palo-alto-3,baum\u00e9-palo-alto-3,10,French,10
+2323 Birch St,2411,Anatolian Kitchen,4.0,295,http://m.yelp.com/biz/anatolian-kitchen-palo-alto,anatolian-kitchen-palo-alto,10,Mediterranean,10
+560 Waverley St,3067,Taipan,3.5,329,http://m.yelp.com/biz/taipan-palo-alto,taipan-palo-alto,10,Chinese,10
+463 S California Ave,2275,La Bodeguita Del Medio,4.0,928,http://m.yelp.com/biz/la-bodeguita-del-medio-palo-alto,la-bodeguita-del-medio-palo-alto,10,Cuban,10
+2437 Birch St,2490,Caf,4.0,382,http://m.yelp.com/biz/caf%C3%A9-pro-bono-palo-alto-3,caf\u00e9-pro-bono-palo-alto-3,10,Italian,10
+1438 El Camino Real,4366,Gombei Japanese Restaurant,3.5,314,http://m.yelp.com/biz/gombei-japanese-restaurant-menlo-park,gombei-japanese-restaurant-menlo-park,10,Japanese,10
+408 S California Ave,2343,Palo Alto Sol,3.5,413,http://m.yelp.com/biz/palo-alto-sol-palo-alto,palo-alto-sol-palo-alto,10,Mexican,10
+1368 El Camino Real,4249,Fey Restaurant,4.0,37,http://m.yelp.com/biz/fey-restaurant-menlo-park,fey-restaurant-menlo-park,10,Szechuan,10
+529 Alma St,2642,Pampas,4.0,1272,http://m.yelp.com/biz/pampas-palo-alto,pampas-palo-alto,10,Brazilian,10
+1010 Doyle St,3766,Cafe Del Sol Restaurant,4.0,160,http://m.yelp.com/biz/cafe-del-sol-restaurant-menlo-park,cafe-del-sol-restaurant-menlo-park,10,Mexican,10
+140 Homer Ave,2562,St Michael's Alley,4.0,130,http://m.yelp.com/biz/st-michaels-alley-palo-alto-2,st-michaels-alley-palo-alto-2,10,American (New),10
+642 Ramona St,2798,Coconuts Caribbean Restaurant & Bar,4.0,832,http://m.yelp.com/biz/coconuts-caribbean-restaurant-and-bar-palo-alto,coconuts-caribbean-restaurant-and-bar-palo-alto,10,Caribbean,10
+447 S California Ave,2291,Pastis,4.0,186,http://m.yelp.com/biz/pastis-palo-alto,pastis-palo-alto,10,Cafes,10
