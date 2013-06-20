@@ -57,7 +57,7 @@ def nws_setWeather(forecast = [70,10,0]):
 		weatherInfo['hot'] = True
 	if(high < 55 ):
 		weatherInfo['cold'] = True
-	if(cloudy > 55 ):
+	if(cloudy > 45 ):
 		weatherInfo['cloud'] = True
 	if(cloudy < 20 ):
 		weatherInfo['sun'] = True
