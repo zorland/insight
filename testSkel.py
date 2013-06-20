@@ -53,6 +53,9 @@ def results():
           weatherInfo['rain'] = True
       if (inputInfo[1] == "cloud"):
           weatherInfo['cloud'] = True
+      if (inputInfo[1] == "sun"):
+          weatherInfo['sun'] = True
+
   weatherURL = nws_getImage(weatherInfo)
   #weather image!
 
