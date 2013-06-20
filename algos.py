@@ -29,6 +29,7 @@ def algo_MakePd(weatherInfo = {}, filename = "rest_cache.txt"):
 
   print "algo success! 2"
   #rests.sort("rating", ascending= False).values[2]
+  print jacqRest['jacq']
   return jacqRest
                       
 
@@ -59,7 +60,14 @@ def algo_CalcJ(inPd, weatherInfo={}):
         restInfo['jacq'][i] *= 0.
       #stupid hack =(  
 
-  return restInfo
+  #normalize the dine-amic scores      
+  maxNorm =  restInfo.sort("jacq", ascending= False).values[0][10]
+  outPd = restInfo.sort("jacq", ascending= False)
+  for i in range (0,len(outPd['jacq'])):
+       outPd['jacq'][i] *= 100.
+       outPd['jacq'][i] /= maxNorm
+
+  return outPd
                       
 
 
