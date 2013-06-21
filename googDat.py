@@ -45,3 +45,18 @@ def goog_APICall(restName ="blue&fish", latlng="-33.867,151.2"):
 
 
  
+def goog_City(zipCode = 94305):
+
+	apiCall = "http://maps.googleapis.com/maps/api/geocode/json?address="
+	apiCall += str(zipCode)
+	apiCall += "&sensor=false"
+	try:
+		googleResponse = urllib.urlopen(apiCall)
+		jsonResponse = json.loads(googleResponse.read())
+		s= jsonResponse['results']
+		d = s[0]['address_components']
+		name = d[1]['long_name']
+		print name
+		return name
+	except:
+		return zipCode

@@ -1,17 +1,17 @@
-Palo Alto CA 94309,0,Moroccan Feast,5.0,5,http://m.yelp.com/biz/moroccan-feast-palo-alto,moroccan-feast-palo-alto,10,Moroccan,10
-420 Emerson St,2861,Evvia Estiatorio,4.5,1169,http://m.yelp.com/biz/evvia-estiatorio-palo-alto,evvia-estiatorio-palo-alto,10,Greek,10
-460 Ramona St,2912,Garden Fresh,4.0,315,http://m.yelp.com/biz/garden-fresh-palo-alto,garden-fresh-palo-alto,10,Vegetarian,10
-546 University Ave,3368,Tamarine,4.0,986,http://m.yelp.com/biz/tamarine-palo-alto,tamarine-palo-alto,10,Vietnamese,10
-201 S California Ave,2537,Baum,4.0,222,http://m.yelp.com/biz/baum%C3%A9-palo-alto-3,baum\u00e9-palo-alto-3,10,French,10
-2323 Birch St,2411,Anatolian Kitchen,4.0,295,http://m.yelp.com/biz/anatolian-kitchen-palo-alto,anatolian-kitchen-palo-alto,10,Mediterranean,10
-560 Waverley St,3067,Taipan,3.5,329,http://m.yelp.com/biz/taipan-palo-alto,taipan-palo-alto,10,Chinese,10
-463 S California Ave,2275,La Bodeguita Del Medio,4.0,928,http://m.yelp.com/biz/la-bodeguita-del-medio-palo-alto,la-bodeguita-del-medio-palo-alto,10,Cuban,10
-2437 Birch St,2490,Caf,4.0,382,http://m.yelp.com/biz/caf%C3%A9-pro-bono-palo-alto-3,caf\u00e9-pro-bono-palo-alto-3,10,Italian,10
-1438 El Camino Real,4366,Gombei Japanese Restaurant,3.5,314,http://m.yelp.com/biz/gombei-japanese-restaurant-menlo-park,gombei-japanese-restaurant-menlo-park,10,Japanese,10
-408 S California Ave,2343,Palo Alto Sol,3.5,413,http://m.yelp.com/biz/palo-alto-sol-palo-alto,palo-alto-sol-palo-alto,10,Mexican,10
-1368 El Camino Real,4249,Fey Restaurant,4.0,37,http://m.yelp.com/biz/fey-restaurant-menlo-park,fey-restaurant-menlo-park,10,Szechuan,10
-529 Alma St,2642,Pampas,4.0,1272,http://m.yelp.com/biz/pampas-palo-alto,pampas-palo-alto,10,Brazilian,10
-1010 Doyle St,3766,Cafe Del Sol Restaurant,4.0,160,http://m.yelp.com/biz/cafe-del-sol-restaurant-menlo-park,cafe-del-sol-restaurant-menlo-park,10,Mexican,10
-140 Homer Ave,2562,St Michael's Alley,4.0,130,http://m.yelp.com/biz/st-michaels-alley-palo-alto-2,st-michaels-alley-palo-alto-2,10,American (New),10
-642 Ramona St,2798,Coconuts Caribbean Restaurant & Bar,4.0,832,http://m.yelp.com/biz/coconuts-caribbean-restaurant-and-bar-palo-alto,coconuts-caribbean-restaurant-and-bar-palo-alto,10,Caribbean,10
-447 S California Ave,2291,Pastis,4.0,186,http://m.yelp.com/biz/pastis-palo-alto,pastis-palo-alto,10,Cafes,10
+1735 Benson Ave,1216,The Stained Glass,4.0,140,http://m.yelp.com/biz/the-stained-glass-evanston,the-stained-glass-evanston,10,American (New),2
+1625 Hinman Ave,1289,Quince,4.0,94,http://m.yelp.com/biz/quince-evanston-2,quince-evanston-2,4.4,American (New),3
+1016 Church St,987,Thai Sookdee Restaurant,3.5,166,http://m.yelp.com/biz/thai-sookdee-restaurant-evanston,thai-sookdee-restaurant-evanston,3.6,Thai,2
+630 Church St,1198,Mt. Everest Restaurant,4.0,192,http://m.yelp.com/biz/mt-everest-restaurant-evanston,mt-everest-restaurant-evanston,3.8,Indian,2
+618 Church St,1208,Bistro Bordeaux,3.5,134,http://m.yelp.com/biz/bistro-bordeaux-evanston,bistro-bordeaux-evanston,4.3,French,3
+525 Dempster St,827,Blind Faith Caf,3.5,337,http://m.yelp.com/biz/blind-faith-caf%C3%A9-evanston-2,blind-faith-caf\u00e9-evanston-2,3.7,Vegetarian,2
+815 Chicago Ave,1235,Campagnola,4.5,89,http://m.yelp.com/biz/campagnola-evanston,campagnola-evanston,4.2,Italian,2
+505 Main St,1181,Oceanique,3.5,142,http://m.yelp.com/biz/oceanique-evanston,oceanique-evanston,4.2,French,3
+1566 Oak Ave,731,Pensiero Ristorante,3.5,68,http://m.yelp.com/biz/pensiero-ristorante-evanston-2,pensiero-ristorante-evanston-2,4.5,Italian,3
+1512 Sherman Ave,874,Creperie Saint Germain,3.5,57,http://m.yelp.com/biz/creperie-saint-germain-evanston,creperie-saint-germain-evanston,10,Creperies,1
+1018 Davis St,839,Cozy Noodles & Rice,3.5,204,http://m.yelp.com/biz/cozy-noodles-and-rice-evanston,cozy-noodles-and-rice-evanston,4.0,Thai,2
+1631 Chicago Ave,1216,Found Kitchen & Social House,4.0,102,http://m.yelp.com/biz/found-kitchen-and-social-house-evanston,found-kitchen-and-social-house-evanston,4.0,American (New),2
+915 Davis St,955,Chef's Station,4.0,40,http://m.yelp.com/biz/chefs-station-evanston,chefs-station-evanston,4.2,American (New),3
+913 Chicago Ave,1075,Cross-Rhodes,4.0,177,http://m.yelp.com/biz/cross-rhodes-evanston,cross-rhodes-evanston,10,Greek,10
+1615 Chicago Ave,1150,Tapas Barcelona,3.5,280,http://m.yelp.com/biz/tapas-barcelona-evanston,tapas-barcelona-evanston,3.9,Spanish,2
+820 Clark St,1244,The Cellar,4.0,105,http://m.yelp.com/biz/the-cellar-evanston,the-cellar-evanston,10,Wine Bars,2
+610 Davis St,1064,Olive Mountain,4.0,151,http://m.yelp.com/biz/olive-mountain-evanston,olive-mountain-evanston,4.1,Caterers,1

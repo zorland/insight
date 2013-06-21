@@ -32,7 +32,10 @@ def results():
  
 #  os.system("rm *.json")
 
+
+
   inputInfo = session['q'].split()
+  cityName = goog_City(inputInfo[0])
   weatherLookup = nws_APICall(inputInfo[0])
   match = nws_gatherInfo(weatherLookup)
   localWeather = nws_getLocal(match)
@@ -73,7 +76,7 @@ def results():
   print restInfo
   print session['q']
 
-  return render_template('index2.html', place = session['q'], restDist = restInfo[1], restName = restInfo[2], restRating = restInfo[3], restUrl = restInfo[5], restCat = restInfo[8],restJacq = restInfo[10], rest1Dist = rest1Info[1], rest1Name = rest1Info[2], rest1Rating = rest1Info[3], rest1Url = rest1Info[5], rest1Cat = rest1Info[8],rest1Jacq = rest1Info[10],rest2Dist = rest2Info[1], rest2Name = rest2Info[2], rest2Rating = rest2Info[3], rest2Url = rest2Info[5], rest2Cat = rest2Info[8],rest2Jacq = rest2Info[10], rest3Dist = rest3Info[3], rest3Name = rest3Info[2], rest3Rating = rest3Info[3], rest3Url = rest3Info[5], rest3Cat = rest3Info[8],rest3Jacq = rest3Info[10],dayHigh = localWeather[0], dayCloudy= localWeather[1], weatherImage = weatherURL )
+  return render_template('index2.html', cityName = cityName, place = session['q'], restDist = restInfo[1], restName = restInfo[2], restRating = restInfo[3], restUrl = restInfo[5], restCat = restInfo[8],restJacq = restInfo[10], rest1Dist = rest1Info[1], rest1Name = rest1Info[2], rest1Rating = rest1Info[3], rest1Url = rest1Info[5], rest1Cat = rest1Info[8],rest1Jacq = rest1Info[10],rest2Dist = rest2Info[1], rest2Name = rest2Info[2], rest2Rating = rest2Info[3], rest2Url = rest2Info[5], rest2Cat = rest2Info[8],rest2Jacq = rest2Info[10], rest3Dist = rest3Info[3], rest3Name = rest3Info[2], rest3Rating = rest3Info[3], rest3Url = rest3Info[5], rest3Cat = rest3Info[8],rest3Jacq = rest3Info[10],dayHigh = localWeather[0], dayCloudy= localWeather[1], weatherImage = weatherURL )
 #  return render_template('results.html')
 
 
