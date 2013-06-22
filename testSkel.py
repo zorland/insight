@@ -35,30 +35,35 @@ def results():
   inputInfo = session['q'].split()
   #just zipcode and over-ride for now
 
+#some overrides for demos
+  weatherClassOver = {}
+  if(len(inputInfo) >1):
+      if (inputInfo[1] == "hot"):
+          weatherClassOver['hot'] = True
+      if (inputInfo[1] == "cold"):
+          weatherClassOver['cold'] = True
+      if (inputInfo[1] == "rain"):
+          weatherClassOver['rain'] = True
+      if (inputInfo[1] == "cloud"):
+          weatherClassOver['cloud'] = True
+      if (inputInfo[1] == "sun"):
+          weatherClassOver['sun'] = True
+
+
+
   cityName = goog_City(inputInfo[0])
 
   myWeather = Weather()
-  myWeather.setValues(inputInfo[0])
-
+  myWeather.setValues(inputInfo[0], weatherClassOver)
+#  print "testing"
+#  print weatherClassOver
   weatherClassInfo =  myWeather.getWeather()
+#  print weatherClassInfo
+
+
   weatherURL=  myWeather.getImage()
   latlngClass = myWeather.getLL()
   localWeather = myWeather.getForecast()
-
-
-#some overrides for demos
-  if(len(inputInfo) >1):
-      if (inputInfo[1] == "hot"):
-          weatherClassInfo['hot'] = True
-      if (inputInfo[1] == "cold"):
-          weatherClassInfo['cold'] = True
-      if (inputInfo[1] == "rain"):
-          weatherClassInfo['rain'] = True
-      if (inputInfo[1] == "cloud"):
-          weatherClassInfo['cloud'] = True
-      if (inputInfo[1] == "sun"):
-          weatherClassInfo['sun'] = True
-
 
 
   yelp_findRest(latlngClass, weatherClassInfo)
