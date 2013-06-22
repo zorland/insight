@@ -18,12 +18,14 @@ class Weather:
 		self.forecast = []
 		
 
-	def setValues(self, zipCode = 94305):		
+	def setValues(self, zipCode = 94305, weatherOverride = {}):		
+		self.weatherType = weatherOverride
 		self.setAPICall(zipCode)
 		self.setForecast()
 		self.setWeather()
 		self.setImage()
 		self.setLL()
+
 		
 
 
