@@ -4,101 +4,109 @@ import re
 import requests
 import os
 
-def nws_APICall(zipCode=94305):
-	baseStr = 'http://graphical.weather.gov'
-	prefix = '/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList='
-	suffix = '&product=time-series&pop12=pop12&maxt=maxt&sky=sky&icons=icons'
-	zipStr = str(zipCode)
-#	print baseStr + prefix + str(zipCode) + suffix
-	return baseStr + prefix + str(zipCode) + suffix
-#http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList=94305&product=glance
+#CLASS DEF
+
+
+class Weather:
+	'weather class'
+
+	def __init__(self):
+		self.weatherImageURL = ""
+		self.weatherType = {}
+		self.location = []
+		self.APICall = ""
+		self.forecast = []
+		
+
+	def setValues(self, zipCode = 94305):		
+		self.setAPICall(zipCode)
+		self.setForecast()
+		self.setWeather()
+		self.setImage()
+		self.setLL()
+		self.setImage()
+		
+
+
+	def setImage(self):
+		url = "/static/images/newsun.png"
+		if("rain" in self.weatherType):
+			url = "/static/images/rain.png"
+		elif("hot" in self.weatherType):
+			url = "/static/images/hot.png"
+		elif("cold" in self.weatherType):
+			url = "/static/images/cold.png"
+		elif("cloud" in self.weatherType):
+			url = "/static/images/cloud.png"
+		self.weatherImageURL = url
+			
+	def getImage(self):		
+		return self.weatherImageURL
+
+	def setLL(self,filename = "default_nws.txt"):
+		if not os.path.isfile(filename):
+			return (0,0)
+	
+		Data = open(filename,"r")
+		locationInfo = re.search('point latitude="(.*)"\s\w*="(.*)"',Data.read())
+		latlng = [float(locationInfo.group(1)),float(locationInfo.group(2))]
+		self.location= latlng
 
 	
-#curl -s 'http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList=94305&product=glance'> out.log
-#how does this work in python!!@?!@!
+	def getLL(self):		
+		return self.location
 
 
-def nws_gatherInfo(apiCall, filename = "default_nws.txt"):
-	r = requests.request("GET",apiCall)
-	rawData = open(filename,"w")
-	rawData.write(r.text)
-	rawData.close()
+	def setWeather(self):
+		high = self.forecast[0]
+		cloudy = self.forecast[1]
+		rainy = self.forecast[2]
+		if(high > 83):
+			self.weatherType['hot'] = True
+		if(high < 55 ):
+			self.weatherType['cold'] = True
+		if(cloudy > 45 ):
+			self.weatherType['cloud'] = True
+		if(cloudy < 20 ):
+			self.weatherType['sun'] = True
+		if(rainy > 35 ):
+			self.weatherType['rain'] = True
+
+
+	def getWeather(self):
+		return self.weatherType
+
+	def getForecast(self):
+		return self.forecast
+
 	
-	Data = open(filename,"r")
-	match = re.findall('<value>([0-9]*)</value>',Data.read())
-	return match
+	def setAPICall(self, zipCode=94305):
+		baseStr = 'http://graphical.weather.gov'
+		prefix = '/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList='
+		suffix = '&product=time-series&pop12=pop12&maxt=maxt&sky=sky&icons=icons'
+		zipStr = str(zipCode)
+		self.APICall = baseStr + prefix + str(zipCode) + suffix
 
 
+	def setForecast(self, dayOffset = 0, filename = "default_nws.txt"):
+		r = requests.request("GET",self.APICall)
+		rawData = open(filename,"w")
+		rawData.write(r.text)
+		rawData.close()
+		Data = open(filename,"r")
+		fullData = re.findall('<value>([0-9]*)</value>',Data.read())
+    #formatting highs by day, percip by 12 hour, cloudy by 3 hour                                                                                                                    # high0-7, cloduy 8-48 percip 49-63                                                                                                                                      
+		cloudyStart = 8 + 8* dayOffset
+		rainyStart = 49 + 2* dayOffset
 
-def nws_getImage(weatherInfo = {}):
-	url = "/static/images/newsun.png"
-	if("rain" in weatherInfo):
-		url = "/static/images/rain.png"
-	elif("hot" in weatherInfo):
-		url = "/static/images/hot.png"
-	elif("cold" in weatherInfo):
-		url = "/static/images/cold.png"
-	elif("cloud" in weatherInfo):
-		url = "/static/images/cloud.png"
-
-	return url
-
-
-
-def nws_setWeather(forecast = [70,10,0]):
-
-	high = forecast[0]
-	cloudy = forecast[1]
-	rainy = forecast[2]
-	weatherInfo = {}
-	print forecast
-
-	if(high > 83):
-		weatherInfo['hot'] = True
-	if(high < 55 ):
-		weatherInfo['cold'] = True
-	if(cloudy > 45 ):
-		weatherInfo['cloud'] = True
-	if(cloudy < 20 ):
-		weatherInfo['sun'] = True
-	if(rainy > 35 ):
-		weatherInfo['rain'] = True
-	print weatherInfo	
-	return weatherInfo
-
-
-
-def nws_getLL(filename = "default_nws.txt"):
+		high =float(fullData[dayOffset])
+		
+		#average over the day
+		cloudy = (float(fullData[cloudyStart]) + float(fullData[cloudyStart+1]) + float(fullData[cloudyStart+2]))/3
+		rainy = (float(fullData[rainyStart]) + float(fullData[rainyStart+1]))/2
+		
+		cloudy = int(cloudy*100)/100.  #truncate the floats                                                                                                
+       		rainy = int(rainy*100)/100.
+		self.forecast = [high, cloudy,rainy]
 	
-	if not os.path.isfile(filename):
-		return (0,0)
-	
-	Data = open(filename,"r")
-	match = re.search('point latitude="(.*)"\s\w*="(.*)"',Data.read())
-	latlng = [float(match.group(1)),float(match.group(2))]
-	print latlng
-	#    return latlng
-	#    print match
-	return latlng
-
-
-
-def nws_getLocal(fullData, offset =0):
-    #formatting highs by day, percip by 12 hour, cloudy by 3 hour
-	# high0-7, cloduy 8-48 percip 49-63	
-	
-	
-	cloudyStart = 8 + 8* offset
-	rainyStart = 49 + 2* offset
-#yuck!
-	
-	
-	high =float(fullData[offset])
-	cloudy = (float(fullData[cloudyStart]) + float(fullData[cloudyStart+1]) + float(fullData[cloudyStart+2]))/3
-	rainy = (float(fullData[rainyStart]) + float(fullData[rainyStart+1]))/2
-
-	cloudy = int(cloudy*100)/100.  #truncate the floats
-	rainy = int(cloudy*100)/100.
-	info = [high, cloudy,rainy]
-	return info
-
+		
