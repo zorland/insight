@@ -32,48 +32,39 @@ def results():
  
 #  os.system("rm *.json")
 
-
-
-
   inputInfo = session['q'].split()
   #just zipcode and over-ride for now
 
   cityName = goog_City(inputInfo[0])
 
   myWeather = Weather()
-  myWeather.setAPICall(inputInfo[0])
-  print myWeather.APICall
+  myWeather.setValues(inputInfo[0])
 
-  weatherLookup = nws_APICall(inputInfo[0])
-  match = nws_gatherInfo(weatherLookup)
-  localWeather = nws_getLocal(match)
-
-  weatherInfo = {}
-  weatherInfo = nws_setWeather(localWeather)
-  latlng = nws_getLL()
-
+  weatherClassInfo =  myWeather.getWeather()
+  weatherURL=  myWeather.getImage()
+  latlngClass = myWeather.getLL()
+  localWeather = myWeather.getForecast()
 
 
 #some overrides for demos
   if(len(inputInfo) >1):
       if (inputInfo[1] == "hot"):
-          weatherInfo['hot'] = True
+          weatherClassInfo['hot'] = True
       if (inputInfo[1] == "cold"):
-          weatherInfo['cold'] = True
+          weatherClassInfo['cold'] = True
       if (inputInfo[1] == "rain"):
-          weatherInfo['rain'] = True
+          weatherClassInfo['rain'] = True
       if (inputInfo[1] == "cloud"):
-          weatherInfo['cloud'] = True
+          weatherClassInfo['cloud'] = True
       if (inputInfo[1] == "sun"):
-          weatherInfo['sun'] = True
+          weatherClassInfo['sun'] = True
 
-  weatherURL = nws_getImage(weatherInfo)
-  #weather image!
 
-  yelp_findRest(latlng, weatherInfo)
-  yelp_getRest(latlng)
 
-  tuples = algo_MakePd(weatherInfo)
+  yelp_findRest(latlngClass, weatherClassInfo)
+  yelp_getRest(latlngClass)
+  tuples = algo_MakePd(weatherClassInfo)
+
 
 
   restInfo = tuples.sort("jacq", ascending= False).values[0]
