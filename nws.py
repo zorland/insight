@@ -24,7 +24,6 @@ class Weather:
 		self.setWeather()
 		self.setImage()
 		self.setLL()
-		self.setImage()
 		
 
 
