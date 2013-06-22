@@ -58,7 +58,7 @@ def yelp_request(latlng=[44,-90], weatherInfo ={}):
   token = oauth2.Token(token, token_secret)
   oauth_request.sign_request(oauth2.SignatureMethod_HMAC_SHA1(), consumer, token)
   signed_url = oauth_request.to_url()
-  print 'Signed URL: %s\n' % (signed_url,)
+#  print 'Signed URL: %s\n' % (signed_url,)
 
   # Connect
   try:
