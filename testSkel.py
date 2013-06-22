@@ -41,7 +41,7 @@ def results():
   cityName = goog_City(inputInfo[0])
 
   myWeather = Weather()
-  myWeather.setAPICall(inputInfo)
+  myWeather.setAPICall(inputInfo[0])
   print myWeather.APICall
 
   weatherLookup = nws_APICall(inputInfo[0])
