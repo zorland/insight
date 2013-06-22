@@ -34,8 +34,16 @@ def results():
 
 
 
+
   inputInfo = session['q'].split()
+  #just zipcode and over-ride for now
+
   cityName = goog_City(inputInfo[0])
+
+  myWeather = Weather()
+  myWeather.setAPICall(inputInfo)
+  print myWeather.APICall
+
   weatherLookup = nws_APICall(inputInfo[0])
   match = nws_gatherInfo(weatherLookup)
   localWeather = nws_getLocal(match)
