@@ -38,7 +38,7 @@ class Weather:
 		elif("cold" in self.weatherType):
 			url = "/static/images/cold.png"
 		elif("cloud" in self.weatherType):
-			url = "/static/images/cloud.png"
+			url = "/static/images/cloudy.png"
 		self.weatherImageURL = url
 			
 	def getImage(self):		
