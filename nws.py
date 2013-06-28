@@ -37,6 +37,8 @@ class Weather:
 			url = "/static/images/hot.png"
 		elif("cold" in self.weatherType):
 			url = "/static/images/cold.png"
+		elif("sun" in self.weatherType):
+			url = "/static/images/newsun.png"
 		elif("cloud" in self.weatherType):
 			url = "/static/images/cloudy.png"
 		self.weatherImageURL = url
