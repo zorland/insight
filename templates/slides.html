@@ -101,12 +101,11 @@
 
       <div class="span12 row-fluid">
 	<p><small>A rating of 5 with only 1 review should not be trusted!.</small></p>
-<p><small> Calculates an uncertainty on the rating using a modified version of the wilson score confidence interval.  </small></p>
-	<img src="/static/images/wilson.png" style="height: 60px;">
-	<p><small>But which way to scale the score?</small></p>
-<p><small> Rating is scaled toward the center.  Restaurants with few (<40) reviews tend toward the extremes of the rating scale when compared to those with more reviews (>40)</small></p>
-	<img src="/static/images/nextHisto.png" style="height: 280px;">
 
+	<img src="/static/images/nextHisto.png" style="height: 300px;">
+
+	<p><small> To account for this, restaurants with few reviews have their ratings scaled toward the average using a modified version of the wilson score confidence interval.  </small></p>
+	<img src="/static/images/wilson.png" style="height: 60px;">
       </div>
     </div>
   </div>
