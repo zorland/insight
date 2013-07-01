@@ -101,11 +101,9 @@
 
       <div class="span12 row-fluid">
 	<p><small>A rating of 5 with only 1 review should not be trusted!.</small></p>
+	<p><small>Restaurants with only a few reviews tend be either very highly rated or very poorly rated when compared to restaurants with more reviews (see below) - account for this effect by scaling the ratings as a function of number of reviews.</small></p>
+	<img src="/static/images/nextHisto.png" style="height: 400px;">
 
-	<img src="/static/images/nextHisto.png" style="height: 300px;">
-
-	<p><small> To account for this, restaurants with few reviews have their ratings scaled toward the average using a modified version of the wilson score confidence interval.  </small></p>
-	<img src="/static/images/wilson.png" style="height: 60px;">
       </div>
     </div>
   </div>
@@ -130,41 +128,14 @@
 
 
 <section class="slide page" id="about">
-  <div class="row-fluid page " >
+  <div class="row-fluid page container-narrow" >
     <h2>Daniel Silverstein</h2>
     <div class="sample-content">
 
-	<div class="span6">
-	<img src="/static/images/pixels.jpg" style="height: 160px;">
+	<div class="span10">
+	<img src="/static/images/aboutMe.png" style="height: 400px;">
 	</div>
-
-
-	<p><small>Worked as part of the 1000+ scientist experiment using the LHC at CERN.  Detector calibration (algorithms) and searching for dark matter (machine learning).</small></p>
-    </div>
-    <div class="row-fluid" >
-      <div class="sample-content">
-	<div class="span6">
-	  <img src="/static/images/coaching.jpg" style="height: 190px;">
-	</div>
-	<p><small>A large amount of free time is devoted to ultimate frisbee - coaching, managing, and administrating</small></p>
-	
       </div>
-    </div>
-
-  <div class="row-fluid" >
-    <div class="sample-content">
-      <div class="span6">
-	<img src="/static/images/old.jpg" style="height: 180px;">
-      </div>
-      <p><small>And sometimes playing too (when I was young)</small></p>
-      
-    </div>
-  </div>
-</div>
-
-
-  </div>
-
 
 </section>
 
@@ -172,6 +143,21 @@
 
 <section class="slide page" id="empty">
   <div class="row-fluid page container-narrow" >
+  </div>
+</section>
+
+
+
+<section class="slide page" id="tech">
+  <div class="row-fluid page container-narrow" >
+    <h2>Yelp Rating Algorithm</h2>
+    <div class="sample-content">
+
+      <div class="span12 row-fluid">
+	<p><small>Restaurants with few reviews have their ratings scaled toward the average using a modified version of the wilson score confidence interval.  </small></p>
+	<img src="/static/images/wilson.png" style="height: 60px;">
+      </div>
+    </div>
   </div>
 </section>
 
