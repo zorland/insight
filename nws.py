@@ -31,14 +31,14 @@ class Weather:
 
 	def setImage(self):
 		url = "/static/images/newsun.png"
-		if("rain" in self.weatherType):
-			url = "/static/images/rain.png"
+		if("sun" in self.weatherType):
+			url = "/static/images/newsun.png"
 		elif("hot" in self.weatherType):
 			url = "/static/images/hot.png"
 		elif("cold" in self.weatherType):
 			url = "/static/images/cold.png"
-		elif("sun" in self.weatherType):
-			url = "/static/images/newsun.png"
+		elif("rain" in self.weatherType):
+			url = "/static/images/rain.png"
 		elif("cloud" in self.weatherType):
 			url = "/static/images/cloudy.png"
 		self.weatherImageURL = url
