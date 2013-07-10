@@ -68,9 +68,9 @@ class Weather:
 			self.weatherType['hot'] = True
 		if(high < 55 ):
 			self.weatherType['cold'] = True
-		if(cloudy > 45 ):
+		if(cloudy > 40 ):
 			self.weatherType['cloud'] = True
-		if(cloudy < 20 ):
+		if(cloudy < 40 ):
 			self.weatherType['sun'] = True
 		if(rainy > 35 ):
 			self.weatherType['rain'] = True
