@@ -101,10 +101,15 @@
 
       <div class="span12 row-fluid">
 	<p><small>A rating of 5 with only 1 review should not be trusted!.</small></p>
-	<p><small>Restaurants with only a few reviews tend be either very highly rated or very poorly rated when compared to restaurants with more reviews (see below) - account for this effect by scaling the ratings as a function of number of reviews.</small></p>
-	<img src="/static/images/nextHisto.png" style="height: 400px;">
+	<p><small>Restaurants with only a few reviews tend be either very highly rated or very poorly rated when compared to restaurants with more reviews (see below) </small></p>
+	<img src="/static/images/nextHisto.png" style="height: 375px;">
 
       </div>
+      <div class="span12 row-fluid">
+	<p><small>Restaurants with few reviews have their ratings scaled toward the average using a modified version of the wilson score confidence interval.  </small></p>
+	<img src="/static/images/wilson.png" style="height: 60px;">
+      </div>
+
     </div>
   </div>
 </section>
