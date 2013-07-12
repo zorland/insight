@@ -19,6 +19,7 @@ class Weather:
 		
 
 	def setValues(self, zipCode = 94305, weatherOverride = {}):		
+		#sets as many values as possible from only the zipcode
 		self.weatherType = weatherOverride
 		self.setAPICall(zipCode)
 		self.setForecast()
@@ -30,6 +31,7 @@ class Weather:
 
 
 	def setImage(self):
+		#sets weather image to display in front end
 		url = "/static/images/newsun.png"
 		if("cloud" in self.weatherType):
 			url = "/static/images/cloudy.png"
@@ -47,6 +49,8 @@ class Weather:
 		return self.weatherImageURL
 
 	def setLL(self,filename = "default_nws.txt"):
+		#sets lat long from zip
+		#must be run after the nws API query
 		if not os.path.isfile(filename):
 			return (0,0)
 	
@@ -61,6 +65,7 @@ class Weather:
 
 
 	def setWeather(self):
+		#sets weather into one of 5 categories based on pre-defined rules
 		high = self.forecast[0]
 		cloudy = self.forecast[1]
 		rainy = self.forecast[2]
@@ -84,6 +89,7 @@ class Weather:
 
 	
 	def setAPICall(self, zipCode=94305):
+		#create API call
 		baseStr = 'http://graphical.weather.gov'
 		prefix = '/xml/sample_products/browser_interface/ndfdXMLclient.php?zipCodeList='
 		suffix = '&product=time-series&pop12=pop12&maxt=maxt&sky=sky&icons=icons'
@@ -93,6 +99,8 @@ class Weather:
 
 	def setForecast(self, dayOffset = 0, filename = "default_nws.txt"):
 		r = requests.request("GET",self.APICall)
+		#nws only sends back data in an awful format.
+
 		rawData = open(filename,"w")
 		rawData.write(r.text)
 		rawData.close()
@@ -101,6 +109,7 @@ class Weather:
     #formatting highs by day, percip by 12 hour, cloudy by 3 hour                                                                                                                    # high0-7, cloduy 8-48 percip 49-63                                                                                                                                      
 		cloudyStart = 8 + 8* dayOffset
 		rainyStart = 49 + 2* dayOffset
+		#once again, have to deal with awful output format from NWS - no JSON
 
 		high =float(fullData[dayOffset])
 		

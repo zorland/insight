@@ -13,14 +13,15 @@ from googDat import *
 import pandas as pd 
 
 def yelp_request(latlng=[44,-90], weatherInfo ={}):
-#  cold = True
-  print weatherInfo
+
   url_params ={}
   url_params['ll'] = str(latlng[0])+"," + str(latlng[1])
   #setting up location
+
   url_params['category'] = "food"
   url_params['limit'] = 20
-  #duh
+
+#alter query based on weather
   if("hot" in weatherInfo):
       url_params['term'] = "ice"
   elif("cold" in weatherInfo):
@@ -74,6 +75,7 @@ def yelp_request(latlng=[44,-90], weatherInfo ={}):
 
 
 def yelp_findRest(latlng =[44,-90], weatherInfo = {},filename = "yelpOut.txt"):
+  #run the query and save the output to file
   response = yelp_request(latlng, weatherInfo)
   rawData = open(filename,"w")
   rawData.write(json.dumps(response, sort_keys=True, indent=2))
@@ -83,12 +85,15 @@ def yelp_findRest(latlng =[44,-90], weatherInfo = {},filename = "yelpOut.txt"):
 
 
 def yelp_getRest(latlng =[44,-90],filename = "yelpOut.txt", cacheName = "rest_cache.txt"):
+  #set rest data from resutls file
 
   if not os.path.isfile(filename):
     return (0,0)
-  print "Great success!"
   data = open(filename, "r")
   fullText = data.read()
+
+  #go through output with regexp
+  #practicing regexp
   address = re.findall('display\waddress":\s\[\s*"(.*)"',fullText)
   distance = re.findall('distance":\s(\w*[^.])',fullText)
   name = re.findall('name":\s"([\w\s&\'.-]*[^"])',fullText)
@@ -97,11 +102,10 @@ def yelp_getRest(latlng =[44,-90],filename = "yelpOut.txt", cacheName = "rest_ca
   url = re.findall('mobile_url":\s"(.*[^"])"',fullText)
   ids = re.findall('id":\s"(.*[^"])"',fullText)
   cat = re.findall('categories":\s\[\s*\[\s*"(.*[^"])"',fullText)
-  print cat
   numRest = len(ids)
 
   tupleFile = open(cacheName,"w")
-  for x in range(0,numRest-3):
+  for x in range(0,numRest-1):
     tupleFile.write(address[x].replace(',', ''))
     tupleFile.write(',')
     tupleFile.write(distance[x])
@@ -126,7 +130,8 @@ def yelp_getRest(latlng =[44,-90],filename = "yelpOut.txt", cacheName = "rest_ca
 
     tupleFile.write('\n')
   tupleFile.close()
+#write rest to file -- later used by algo.py
 
-  return #match
+  return 
 
 

@@ -16,11 +16,13 @@ app.debug = True
 def index():
     return render_template('index.html')
 
+#demo slides
 @app.route('/slides')
 def slides():
     return render_template('slides.html')
 
 
+#slides for thesis work
 @app.route('/oldwork')
 def old():
     return render_template('oldwork.html')
@@ -36,12 +38,11 @@ def results():
   if not 'q' in session:
     return render_template('index.html')
  
-#  os.system("rm *.json")
 
   inputInfo = session['q'].split()
   #just zipcode and over-ride for now
 
-#some overrides for demos
+#weather over-ride
   weatherClassOver = {}
   if(len(inputInfo) >1):
       if (inputInfo[1] == "hot"):
@@ -57,36 +58,36 @@ def results():
 
 
 
+  #Look up cityname from zipcode
   cityName = goog_City(inputInfo[0])
 
   myWeather = Weather()
+
+  #setup weather class and pull out relevant info
   myWeather.setValues(inputInfo[0], weatherClassOver)
-#  print "testing"
-#  print weatherClassOver
   weatherClassInfo =  myWeather.getWeather()
-#  print weatherClassInfo
-
-
   weatherURL=  myWeather.getImage()
   latlngClass = myWeather.getLL()
   localWeather = myWeather.getForecast()
 
-
+  #yelp API query 
   yelp_findRest(latlngClass, weatherClassInfo)
   yelp_getRest(latlngClass)
+  #put resturants into data structure
   tuples = algo_MakePd(weatherClassInfo)
 
 
-
-  rest1Info = tuples.sort("jacq", ascending= False).values[0]
-  rest2Info = tuples.sort("jacq", ascending= False).values[1]
-  rest3Info = tuples.sort("jacq", ascending= False).values[2]
-  rest4Info = tuples.sort("jacq", ascending= False).values[3]
+  #pick top results by score
+  rest1Info = tuples.sort("dineScore", ascending= False).values[0]
+  rest2Info = tuples.sort("dineScore", ascending= False).values[1]
+  rest3Info = tuples.sort("dineScore", ascending= False).values[2]
+  rest4Info = tuples.sort("dineScore", ascending= False).values[3]
   
-#  print restInfo
-#  print session['q']
 
+  #pass restaurant/weather info to frontend page
   return render_template('index2.html', rest1 = rest1Info, rest2 = rest2Info, rest3 = rest3Info, rest4 = rest4Info, cityName = cityName, place = session['q'],dayHigh = localWeather[0], dayCloudy= localWeather[1], weatherImage = weatherURL )
+
+
 #  return render_template('results.html')
 
 
@@ -96,5 +97,5 @@ if __name__ == "__main__":
 
     app.run()
 #    app.run(host="0.0.0.0",port=80)
+#toggle for local/aws
 
-    #hello() ??

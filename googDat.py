@@ -8,30 +8,22 @@ import urllib
 
 def goog_APICall(restName ="blue&fish", latlng="-33.867,151.2"):
 
+	#API call based on zipcode lat/long
 	locString = str(latlng[0])+"," + str(latlng[1])
 	restName = restName.replace('&', '')
 	callName = re.sub(r"\s+", '&', restName)
-#	callName = restName.replace(' ', '&')
-	print callName
 	baseStr = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
 	middleStr = '&radius=3000&types=food&name='
 	suffix = '&sensor=false&key=AIzaSyBRAegE--xWfdAJQCkehT6j1y0Ic_KOBik'
-#	print "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&types=food&name=fish&sensor=false&key=AIzaSyBRAegE--xWfdAJQCkehT6j1y0Ic_KOBik"	
-	print baseStr + locString+ middleStr+  callName +suffix
 	apiCall = baseStr + locString+ middleStr+  callName +suffix
 
-#	filename = "default_goog.txt"
-#	r = requests.request("GET",apiCall)
-#	rawData = open(filename,"w")
-#	rawData.write(r.text)
-#	rawData.close()
-
+	#get JSON file from API call
 	googleResponse = urllib.urlopen(apiCall);
 	jsonResponse = json.loads(googleResponse.read())
 	s= jsonResponse['results']
-	priceLev = 2 # this is a sad default but cant do better
-	stars = 10
-	print "LENGTH =" + str(len(s))
+	priceLev = 2 
+	stars = 10 #set default beyond possible values -- if no rating in google, algo.py takes care of it
+#	print "LENGTH =" + str(len(s))
 	if (len(s) > 0):
 		if('price_level' in s[0]):
 			priceLev = s[0]['price_level']
@@ -47,6 +39,7 @@ def goog_APICall(restName ="blue&fish", latlng="-33.867,151.2"):
  
 def goog_City(zipCode = 94305):
 
+	#find city name from zipcode
 	apiCall = "http://maps.googleapis.com/maps/api/geocode/json?address="
 	apiCall += str(zipCode)
 	apiCall += "&sensor=false"
@@ -56,7 +49,6 @@ def goog_City(zipCode = 94305):
 		s= jsonResponse['results']
 		d = s[0]['address_components']
 		name = d[1]['long_name']
-		print name
 		return name
 	except:
 		return zipCode
